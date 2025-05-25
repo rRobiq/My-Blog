@@ -1,10 +1,6 @@
-from django.shortcuts import render, HttpResponse
-from .models import Post
-from django.shortcuts import get_object_or_404, render
-
-# Create your views here.
-def index(request):
-    return render(request, 'index.html')
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Post, Review
+from .forms import ReviewForm
 
 def about(request):
     return render(request, 'about.html')
@@ -35,8 +31,38 @@ def youngthug(request):
 
 def index(request):
     posts = Post.objects.all()
-    return render(request, 'index.html', {'posts': posts})
+    reviews = Review.objects.all() 
+    return render(request, 'index.html', {'posts': posts, 'reviews': reviews})
 
 def post_detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     return render(request, 'post_detail.html', {'post': post})
+
+def submit_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')  
+    else:
+        form = ReviewForm()
+    return render(request, 'submit_review.html', {'form': form})
+
+def update_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = ReviewForm(instance=review)
+    return render(request, 'update_review.html', {'form': form})
+
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    if request.method == 'POST':
+        review.delete_review()
+        return redirect('index')
+    return render(request, 'delete_review.html', {'review':
+review})

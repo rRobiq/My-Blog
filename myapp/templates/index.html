@@ -105,6 +105,23 @@
         {% endblock %}
     </section>
 
+    <section class="reviews">
+            <h2>Reviews</h2>
+        <ul>
+            {% for review in reviews %}
+        <li>
+            <p><strong>{{ review.email }}</strong> ({{ review.date }})</p>
+            <p>Rating: {{ review.rating }}</p>
+            <p>{{ review.comment }}</p>
+            <a href="{% url 'update_review' review.id %}" title="Edit">✏️</a>
+            <span class="separator">|</span>
+            <a href="{% url 'delete_review' review.id %}" title="Delete">🗑️</a>
+        </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'submit_review' %}">Leave a Review</a>
+    </section>
+
     </article>
     
 

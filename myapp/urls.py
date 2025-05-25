@@ -14,4 +14,7 @@ urlpatterns = [
     path('MyTop/', views.MyTop, name='MyTop'),
     path('youngthug/', views.youngthug, name='youngthug'),
     path('post/<int:post_id>/', views.post_detail, name='post_detail'),
+    path('submit-review/', views.submit_review, name='submit_review'),
+    path('update-review/<int:review_id>/', views.update_review,name='update_review'),
+    path('delete-review/<int:review_id>/', views.delete_review,name='delete_review'),
 ]
