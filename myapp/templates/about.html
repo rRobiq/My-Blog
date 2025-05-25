@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomescu Robert - About</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+<body>
+
+<h1>About Me</h1>
+<p>I’m 19 years old, currently studying computer science at UVT. I’ve always had a passion for music, and I enjoy exploring how creativity and technology can come together. I’m constantly looking for new ways to learn and grow, whether it's through my studies or personal interests. On this blog, I will talk a lot about my music taste.</p>
+
+<p>This is<br>my favorite<br>album cover.</p>
+<img src="https://cdn-images.dzcdn.net/images/cover/2791130f9243fa229769538af05365ad/0x1900-000000-80-0-0.jpg" width="250" height="250" alt="album.jpg">
+
+<h2>Education</h2>
+<table style="width:100%;border:1px solid black;">
+    <tr>
+        <td><p><strong>Student</strong> - West University of Timisoara, 2025</p></td>
+        <td></td>
+    </tr>
+</table>
+
+<h2>Experience</h2>
+<p><strong>High School diploma</strong> - Colegiul National Pedagogic "Stefan Odobleja"</p>
+
+<h2>Things that I like</h2>
+<table style="width:100%;border:1px solid black;">
+    <tr>
+        <th colspan="2">Things that I like</th>
+    </tr>
+    <tr>
+        <td colspan="2"><p>Here I’ll name 3 things that I like to do:</p></td>
+    </tr>
+    <tr>
+        <td><ol type="1">
+            <li>To listen to music</li>
+            <li>To hang out with my friends</li>
+            <li>To learn new things</li>
+        </ol></td>
+        <td></td>
+    </tr>
+</table>
+
+<p><strong>CONTACT ME</strong></p>
+<p><strong>E-mail:</strong> robert.tomescu05@e-uvt.ro</p>
+<p><strong>Phone:</strong> +40770703523</p>
+
+<h3><a href="{% url 'index' %}">Return</a></h3>
+
+<p>&copy; 2025 Tomescu Robert - Blog</p>
+
+</body>
+</html>

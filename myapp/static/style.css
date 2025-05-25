@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+nav{
+    background-color: #254058;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+body {
+    background-image: url(https://img.freepik.com/free-photo/beautiful-photo-sea-waves_58702-10597.jpg?t=st=1741787535~exp=1741791135~hmac=c54041b09c70cb9d5f13a66ab37e7ce179dc0442d34f053a73264c1ecb7cf8be&w=1060);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateY(100vh);
+    animation: slideUp 1.5s ease-out forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+body {
+    color: white;
+}
+
+a {
+    color: rgb(88, 185, 241);
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background-color: #254058;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.hidden {   
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #254058;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ffffff55;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav#mainMenu {
+        display: none;
+    }
+
+    nav#mainMenu.active {
+        display: block;
+    }
+}

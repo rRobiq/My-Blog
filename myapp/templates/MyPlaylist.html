@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Playlist</title>
+<link rel="stylesheet" href="{% static 'MyPlaylist.css' %}">
+
+</head>
+
+<body>
+
+<header> 
+<h2>My playlist</h2>
+</header>
+
+<div>
+    <p>By Tomescu Robert, Posted on 26/11/2024 .</p>
+    <img src="https://bit.ly/43eicgK" width="460" height="260" alt="Album">
+    <h3>Why Young Thug, Lil Uzi Vert & Playboi Carti Are the GOATs</h3>
+    <p>For me, Robert, these artists aren’t just making music they’re shaping a whole vibe.
+    <br> Young Thug’s unpredictable flows, Uzi’s futuristic melodies, and Carti’s unmatched energy make them stand out.
+    <br>Their influence goes beyond rap, creating a sound that feels alive, rebellious, and ahead of its time. 🚀🔥</p>
+</div> 
+
+<h2><a href="{% url 'index' %}">Return</a></h2>
+<footer> <p>© Copyright 2024-2025. </p> </footer>  
+
+</body>
+</html>

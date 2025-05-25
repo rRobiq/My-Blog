@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="{% static 'gallery.css' %}">
+</head>
+<body>
+
+  <nav>
+    <label class="logo">Tomescu Robert - Gallery</label>
+  </nav>
+
+  <h2 class="gallery-title">My Photo Gallery</h2>
+
+  <div class="gallery-container">
+    <h2>My Gallery</h2>
+    <div class="gallery">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lKJKVlE-XcAgWMWbOmYWbbUIcNDSsKTgv_beOpto71EYw=s900-c-k-c0x00ffffff-no-rj" width="380" alt="Pop Smoke" />
+      <img src="https://lh3.googleusercontent.com/No3I8pA9ows2dy6NElEr9mCXLzYxgjVvsQr7h69C03palsH1u8Q8iw-sAAUxav599Wmi64up8lbDGbI=w544-h544-p-l90-rj" width="380" alt="Xxxtentacion" />
+      <img src="https://www.rollingstone.com/wp-content/uploads/2018/11/mac-miller-left-behind.jpg?w=1581&h=1054&crop=1" width="380" alt="MacMiler" />
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  
+  <h3><a href="{% url 'index' %}">Return</a></h3>
+  
+  <script src="{% static 'gallery.js' %}"></script>
+</body>
+</html>

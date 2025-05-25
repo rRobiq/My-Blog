@@ -1,0 +1,45 @@
+.gallery-container {
+    position: relative; 
+    max-width: 960px;   
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 20px;            
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(37, 64, 88, 0.8); 
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 28px;
+    user-select: none;
+    z-index: 10; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(88, 185, 241, 0.9);
+}
+
+.prev {
+    left: 10px; 
+}
+
+.next {
+    right: 10px; 
+}
+
+
+@media (max-width: 600px) {
+    .prev, .next {
+        font-size: 22px;
+        padding: 10px 14px;
+    }
+}

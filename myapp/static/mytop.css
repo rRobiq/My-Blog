@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.nav{
+    background-color: #254058;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+body {
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcICAcIBwcGBwgIBwoHBwYGBg8ICQcKIBEWFiARFRUYHSggGBolGx8fITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDisZFRkrNy0tKysrKysrKzc3LS0rNy0rKysrKysrKysrKystKysrKysrKy0rLSsrKysrLSsrK//AABEIAKgBLAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAgAGBP/EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABkBAQEBAQEBAAAAAAAAAAAAAAIBAAYEBf/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwD01Jqa+c46CitRVKCppqaxCitRVKCppqapRqmmprHBRWoqlBU01NUoKKU1SFTTUsUappqapQUVhVKCppqaxQCmpqnBRWTWJqmmpUoKK1FUoKmmprFBQ1Ck75NNTXjc3BRWoqlBU02pqrBRTU1TgqTRWKCppqapQUVqKpQVNNSxRqmtRVKCppTVKNUmprFBRWoqlBUlNU4KKaligqaamqUFFKapQVNNFYoKmmpqlBQ1GqTvqmmprxubjVNNTapCppqapRqmtRWKBNNTWKNU01NUo1TTU1SgqaU1SFFaisUFTTU1SjJpqapQVNNDHBU01NUo1TSmqQqaalSjVNNTWKCitRVKCppqVKNUmpYnfVNNTXjc21TWoqlBU01NUoKGorFBU01NUo1TTU1SgoaiscFTTU1VgFNTVKChqKxwVNNTVKCisKpQVNNFYoKmmpqlBU01NUo1TTU1igorUVSgqaU1TjVJqVKO+qaamvG5oUVqKpQVNNSxRqmmpqlBRWoqnBU01NYoBaamqUFSamqUappqWKAVqKpQVNNSxQUVqKpQJpqapQUNRVKCppqaxRqmmpqnBRWoUoKmmprFBQalSd9U01NeNzUFFaiqUFTSmscaprUVSgorUVSgqTU1iFFapqlGTTU1SjVNKapQUVqmsUZNNTVKChqKxwVNNTVWMmmpqlBU00VjgqaamqUApqapQVNNTVKNUmpYo76ppqa8jmoKK1DHBU01NUo1TTU1SgqaaGKCppqapQUVhVKCppqWKNU01NUoKk0VSgqaaljjVNNTVIVNKapRqmmprFBRWqapRqk1NUoKKamsUFTTU1SjVOmpUnfVNNTXjc3AKamsUFTTU1SjVNNTVKCisKpCppqWIUVqKpQUVqmqUappqaxwCtRVKCppTVIUVqGKCppqapRqmmprFBU01NUoyaamqUFFaiqUFTTU1jjBkqTvqk1NeNzUaprUVSgorUVSgqaalijVFNTVKNU0pqlBQ1FYoKK1TVONU0pqlBRWoYoKmmpqlBRWFUoKmmprFGqaamqUFDCqUFTTU1SjVNNTWOCpNFUoKk1KlHfJpqa8bmoKK1FYoKK1TVKMmmpqkKk0VigqaamqcZNNTVKCppqWKNU01NUoKKamqQqaamqUappqaxQVNNTVKNU01KlBRWorHBU01NUo1TTU1igFNTVKChgpO9qaWeNzUTU1mUomgMxwVNZlWJFDKUFSWYk1NZlOJorMpRNSzMUTRQykE1mUhU0MxQVNLKUTU1mUk0VmU4mprMxQVLMpJorMpRNTrMxR/9k=);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateY(100vh);
+    animation: slideUp 1.5s ease-out forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+a:hover {
+    color: rgb(5, 63, 5);
+}
+
+#header h1{
+    font-size: 50px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0; /* Remove padding for large screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+}

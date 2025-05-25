@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomescu Robert - Blog</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'menu.css' %}">
+<link rel="stylesheet" href="{% static 'BackToTop.css' %}">
+<link rel="stylesheet" href="{% static 'Search.css' %}">
+
+</head>
+
+<body>
+
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Back to Top</button>
+
+    <header class="top-header">
+        <label class="logo">Tomescu Robert - Blog</label>
+    </header>
+
+    <section class="home"></section>
+
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search the blog...">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <article>
+    
+        <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'form' %}">Form</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'chatbot' %}">Chatbot</a></li>
+            </ul>
+        </nav>
+
+        <header><h2>Home Page</h2></header>
+
+        <div id="blogContent">
+            <p>Welcome to my personal blog—I'm <strong>Tomescu Robert</strong>, and I’m thrilled to have you here.</p>
+            <p>Music isn’t just a hobby for me—it’s a lifestyle. From the moment I wake up to the time I wind down at night, music flows through every part of my day. It inspires me, energizes me, and helps me express emotions words sometimes can’t capture.</p>
+            <p>I'm especially drawn to <strong>hip-hop</strong>, a genre that has profoundly shaped my identity and perspective. Artists like <strong>Young Thug</strong> and <strong>Playboi Carti</strong> aren’t just on my playlists—they’re voices that resonate with how I see the world. Their music is raw, experimental, and incredibly dynamic. Whether it's Thug’s unorthodox melodies or Carti’s infectious energy and flow, there's something in their art that always keeps me coming back for more.</p>
+            <p>The beauty of music is that it adapts to every moment. Whether I’m studying, walking through the city, or just zoning out with my headphones on, there’s always a beat that fits the vibe perfectly. Hip-hop gives me the freedom to feel confident, creative, and connected to something bigger.</p>
+            <p>This blog is a space where I’ll share more about my musical tastes, artists I’m currently listening to, and how music influences different aspects of my life. So, if you’re a fellow music lover or just curious about my world, you’re in the right place.</p>
+            <p>Stay tuned—this is just the beginning.</p>
+        </div>
+
+        <section class="blog-preview-blocks">
+            <h3>Featured Blog Posts:</h3>
+
+            <div class="post-block">
+                <h4>Lil Uzi Vert</h4>
+                <p>Dive into Uzi’s futuristic sound, fashion-forward image, and why he's one of trap’s most unpredictable artists.</p>
+                <a href="{% url 'liluzi' %}" class="read-more">Read More →</a>
+            </div>
+
+            <div class="post-block">
+                <h4>My Playlist</h4>
+                <p>A curated mix of tracks that match every mood—from hype workouts to deep study sessions. Discover what I’m vibing to.</p>
+                <a href="{% url 'MyPlaylist' %}" class="read-more">Read More →</a>
+            </div>
+
+            <div class="post-block">
+                <h4>My Top Artists</h4>
+                <p>Here are the artists who’ve shaped my soundscape in 2025. Expect surprises and favorites alike.</p>
+                <a href="{% url 'MyTop' %}" class="read-more">Read More →</a>
+            </div>
+
+            <div class="post-block">
+                <h4>Playboi Carti</h4>
+                <p>All about Carti’s vibe: avant-garde flows, vamp aesthetics, and what makes him an underground legend.</p>
+                <a href="{% url 'playboicarti' %}" class="read-more">Read More →</a>
+            </div>
+
+            <div class="post-block">
+                <h4>Young Thug</h4>
+                <p>Unpacking Thugger’s genre-defying music, business moves, and how he’s redefining modern hip-hop culture.</p>
+                <a href="{% url 'youngthug' %}" class="read-more">Read More →</a>
+            </div>
+        </section>
+
+    <section class="dynamic-posts">
+        <h3>Latest Posts:</h3>
+    {% block content %}
+        {% for post in posts %}
+        <article>
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p id="post-date">Posted on {{ post.post_date }}</p>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-small">
+            {% endif %}
+            <p>{{ post.paragraph }}</p>
+            <a href="{% url 'post_detail' post.id %}" class="read-more-btn">Read More →</a>
+        </article>
+        {% endfor %}
+        {% endblock %}
+    </section>
+
+    </article>
+    
+
+    <script src="{% static 'menu.js' %}" defer></script>
+    <script src="{% static 'BackTOTheTop.js' %}" defer></script>
+    <script src="{% static 'Search.js' %}" defer></script>
+
+    <footer>
+        <p>&copy; 2025 Tomescu Robert - Blog</p>
+    </footer>
+
+</body>
+</html>

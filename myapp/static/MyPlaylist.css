@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.nav{
+    background-color: #254058;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+body {
+    background-image: url(https://i.ytimg.com/vi/1PcmV6-z9Yc/maxresdefault.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateY(100vh);
+    animation: slideUp 1.5s ease-out forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+a:hover {
+    color: rgb(5, 45, 63);
+}
+
+#header h1{
+    font-size: 50px;
+}
+h2 {
+    color: rgb(5, 255, 242); 
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0; /* Remove padding for large screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Top Artists</title>
+<link rel="stylesheet" href="{% static 'mytop.css' %}">
+
+</head>
+
+<body>
+
+<header>
+    <h2>My top artists according to my streaming platform</h2>
+</header>
+
+<div>
+
+<p>Tomescu Robert posted on 14/7/2024. </p>
+<p>How can a music streaming platform can see my favorite artist was my question for today and i learned that so let me explain that for you
+<br>So a music streaming platform determines your top artist by analyzing your listening habits. It tracks data like:</p>
+<article>
+    <h2>Streaming platform methods</h2>
+<ul>
+    <li><strong>Play Count:</strong> How often you play songs by an artist.</li>
+    <li><strong>Listening Time:</strong> Total minutes spent on their music.</li>
+    <li><strong>Skips & Replays:</strong> If you frequently replay or skip their songs.</li>
+    <li><strong>Interaction:</strong> Likes, shares, or playlist additions.</li>
+</ul>
+</article>
+<p>Based on this data, the platform compiles a list of your most-listened-to artists. It’s a cool way to see who you’ve been vibing with the most. </p>
+<h3>My top artist are:</h3>
+    <ol>
+        <li>Young Thug</li>
+        <li>Lil Uzi Vert</li>
+        <li>Playboi Carti</li>        
+    </ol>
+    <p class="intro">This is an introductory paragraph.</p>
+    <p>This is a regular paragraph.</p>
+    <p class="intro">This is another introductory paragraph.</p>
+</div>
+
+<h2><a href="{% url 'index' %}">Return</a></h2>
+<footer> <p>© Copyright 2024-2025. </p> </footer>
+
+</body>
+</html>
