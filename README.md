@@ -1,35 +1,29 @@
-# Dynamic Content Management Platform (Blog Site)
+# Django Blog Project
 
-A web-based blog application built to manage and display dynamic content. This project was developed as an academic assignment to demonstrate full-stack web development principles, connecting a robust backend with an interactive user interface.
+A simple, fully functional blog website I built for a university assignment at the West University of Timișoara. The main goal of this project was to learn how to connect a Python backend to a frontend interface and manage a database.
 
-## 💻 Tech Stack
+## Tech Stack
 * **Backend:** Python, Django
-* **Frontend:** HTML5, CSS3, JavaScript
-* **Database:** SQLite (Default Django DB)
+* **Frontend:** HTML, CSS, vanilla JavaScript
+* **Database:** SQLite (Django's default)
 
-## 🚀 Key Features
-* **Dynamic Content Management:** Creation and display of blog posts without modifying the source code.
-* **Media Handling:** Proper storage and rendering of dynamic images (e.g., article thumbnails) using Django's media configurations.
-* **Responsive UI:** Clean and structured user interface utilizing modern CSS and JavaScript for interactive elements.
-* **MVT Architecture:** Strict adherence to Django's Model-View-Template design pattern.
+## What it does
+* **Dynamic Posts:** You can add, edit, and view blog posts directly from the app without touching the HTML code.
+* **Image Uploads:** Supports uploading and displaying images for each post (using Django's media routing).
+* **MVT Structure:** Organized using Django's standard Model-View-Template pattern.
 
-## ⚙️ How to Run Locally
+## How to run it locally
 
-If you want to run this project on your local machine, follow these steps:
+1. Clone this repo:
+git clone https://github.com/rRobiq/My-Blog.git
 
-1. Clone the repository:
-git clone https://github.com/[Your-GitHub-Username]/My-Blog.git
-
-2. Navigate to the project directory:
+2. Go into the project folder:
 cd My-Blog
 
-3. Apply database migrations:
+3. Apply the migrations to set up the database:
 python manage.py migrate
 
-4. Run the development server:
+4. Start the server:
 python manage.py runserver
 
-5. Open your browser and go to `http://127.0.0.1:8000/`
-
-## 📌 Context
-This project was developed during my BSc in Computer Science at the West University of Timișoara, demonstrating my ability to integrate backend logic with frontend design.
+5. Open `http://127.0.0.1:8000/` in your browser.
